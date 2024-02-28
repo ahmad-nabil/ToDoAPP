@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerHome"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context=".Home"
+    tools:openDrawer="start" android:layout_width="match_parent">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+
+        android:animationCache="true"
+        android:background="@drawable/linercorner"
+        android:backgroundTint="#84E6FF"
+        android:fitsSystemWindows="true"
+        android:textAlignment="viewEnd"
+        android:textDirection="inherit"
+        android:visibility="visible"
+        app:itemHorizontalPadding="100dp"
+        app:itemIconTint="#090808"
+        app:itemShapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+        app:itemShapeFillColor="#DD9797"
+        app:itemShapeInsetBottom="5dp"
+        app:itemShapeInsetTop="10dp"
+        app:itemTextAppearanceActiveBoldEnabled="true"
+        app:itemTextColor="#6A0202"
+        app:itemVerticalPadding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        app:menu="@menu/menu_aio" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="top"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIconTint="#000000" />
+
+        <FrameLayout
+            android:id="@+id/FramesHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/materialToolbar">
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
